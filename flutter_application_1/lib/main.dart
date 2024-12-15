@@ -8,12 +8,12 @@ void main() {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         appBarTheme: const AppBarTheme(color: Color(0xFF5DF591)),
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
+        colorScheme: ColorScheme.fromSeed(seedColor: Color(0xFF5DF591)),
         useMaterial3: true,
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Webull'),
+          title: const Text('Star Buck'),
           centerTitle: true,
           leading: IconButton(
             icon: const Icon(Icons.menu),
@@ -26,7 +26,7 @@ void main() {
           child: Column(
             children: [
               Image.asset(
-                'assets/images/logo.png',
+                'assets/images/logo.jpg',
                 height: 200, // ความสูงของรูป
                 width: 250, // ความกว้างของรูป
               ),
@@ -48,7 +48,7 @@ void main() {
               ),
               const SizedBox(height: 50),
               const Row(
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
                     'สรุปรายละเอียดชาร์จ',
@@ -59,25 +59,105 @@ void main() {
                     ),
                   ),
                 ],
-                
               ),
-              const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text('วันที่ชาร์จ'),
-                  Text('9 กันยายน'),
-
-                  Text('สถานีชาร์จ'),
-                  Text('PEA VOLTA บางจาก')
-                ],
-                
+              const SizedBox(height: 10),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 16.0), 
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'วันที่ซื้อ',
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.black,
+                          ),
+                        ),
+                        Text(
+                          '9 กันยายน 2566',
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 10),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'สาขา',
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.black,
+                          ),
+                        ),
+                        Text(
+                          'บางจาก',
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 10),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'เมนู',
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.black,
+                          ),
+                        ),
+                        Text(
+                          'ลาเต้เย็น',
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 10),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'รวมค่าบริการ',
+                          style: TextStyle(
+                            color: Color(0xFF5DF591),
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                          ),
+                        ),
+                        Text(
+                          '200.00 บาท',
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: Color(0xFF5DF591),
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
+              const SizedBox(height: 50),
               ElevatedButton(
                 onPressed: () {
                   debugPrint('Pressed Button');
                 },
                 child: const Text(
-                  'Submit',
+                  'จ่ายเงิน',
                   style: TextStyle(fontSize: 20),
                 ),
               ),
